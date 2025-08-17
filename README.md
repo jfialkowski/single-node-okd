@@ -2,7 +2,7 @@
 
 ## Requirements
 
-- **Bastion Host:** Small VM to run `oc` and OpenShift Installer commands.
+- **Bastion Host:** Small VM with `oc` installed.
 - **Minimum OKD Node:**  
   - x86_64 CPU  
   - 16GB RAM  
