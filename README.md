@@ -28,7 +28,7 @@ apiVersion: v1beta1
 kind: AgentConfig
 metadata:
   name: okd
-rendezvousIP: 192.168.68.201
+rendezvousIP: Your_Cluster_IP
 hosts:
   - hostname: okd
     role: master
@@ -36,7 +36,7 @@ hosts:
       deviceName: "/dev/nvme0n1"
     interfaces:
       - name: enp2s0
-        macAddress: "58:47:ca:7e:54:f0"
+        macAddress: "12:dd:cc:ee:bb:aa"
     networkConfig:
       interfaces:
         - name: enp2s0
@@ -46,17 +46,17 @@ hosts:
           ipv4:
             enabled: true
             address:
-              - ip: 192.168.68.201
+              - ip: Your_Cluster_IP
                 prefix-length: 24
             dhcp: false
       dns-resolver:
         config:
           server:
-            - 192.168.68.1
+            - Your_Cluster_IP
       routes:
         config:
           - destination: 0.0.0.0/0
-            next-hop-address: 192.168.68.1
+            next-hop-address: Your_Cluster_Gateway_IP
             next-hop-interface: enp2s0
             table-id: 254
 additionalNTPSources:
@@ -80,7 +80,7 @@ controlPlane:
 networking:
   networkType: OVNKubernetes
   machineNetwork:
-  - cidr: 192.168.68.0/24
+  - cidr: Your_Cluster_CIDR (i.e 192.168.1.0/24)
   clusterNetwork:
   - cidr: 10.128.0.0/14
     hostPrefix: 23
