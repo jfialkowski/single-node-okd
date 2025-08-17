@@ -129,6 +129,6 @@ sudo dd if=agent.x86_64.iso of=/dev/<YourUSBDevice> bs=4m status=progress
 ./openshift-install agent wait-for install-complete --dir=. --log-level=debug
 ```
 
-Follow onscreen instructions to access your cluster.
+Follow onscreen instructions to access your cluster. The cluster will reboot after it writes its image to disk. Make sure you remove the USB stick to continue the installation after reboot. 
 
 ---
