@@ -7,7 +7,11 @@
   - x86_64 CPU  
   - 16GB RAM  
   - 8 CPU cores  
-  - 150GB disk space
+  - 150GB disk space 
+- **The Following A Records on your LAN DNS pointing to `Your_Cluster_IP`:
+  - api.okd.home.local
+  - console.okd.home.local
+  - *.apps.okd.home.local
 
 ## Steps
 
