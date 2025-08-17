@@ -15,7 +15,8 @@
   - Replace `Your_Cluster_IP` with your Clusters Given IP Address.
   - Replace `Your_Cluster_Gateway_IP` with your Gateway's IP address (i.e. 192.168.0.1).
   - Replace `Your_Cluster_CIDR` with your Clusters Network (i.e 192.168.1.0/24)
-  - Update `sshKey` with your own public ssh key. 
+  - Update `sshKey` with your own public ssh key.
+  - Update any references to your network interface (i.e `enp2s0`) with the name of your Ethernet interface. 
 
 Create a working directory and edit your config files:
 
